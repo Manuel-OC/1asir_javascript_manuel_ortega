@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let nombres = ["Juan Diego","Ale","Miguel","Melchor","David"]
+        let edades = [19,20,18,30,21];
+        
+        indice=-1;
+        n=prompt("Introduce un nombre");
+
+        for(i=0 ;i< nombres.length ; i++){
+            if(nombres[i]==n){
+                indice=i;
+            }
+        }
+
+        if(indice==-1){document.write("No tengo un amigo con ese nombre");}
+        else{document.write("La edad de "+nombres[indice]+" es "+edades[indice]);}
+    </script>
+
+</body>
+
+</html>
