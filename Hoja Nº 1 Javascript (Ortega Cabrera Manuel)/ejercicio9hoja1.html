@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hoja 1 Ejercicio 9 (Manuel Ortega Cabrera)</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+<h2>Hoja 1 Ejercicio 9 (Manuel Ortega Cabrera)</h2>
+
+<script>
+
+num1=parseInt(prompt("Introduzca un valor"));
+num2=parseInt(prompt("Introduzca otro valor"));
+
+if(num1>num2){
+    mayor=num1;
+    menor=num2;
+}else{
+    mayor=num2;
+    menor=num1;
+}
+
+document.write("Con bucle for: ");
+for(i=menor;i<=mayor;i++){
+    document.write(i+", ");
+}
+
+document.write("Con bucle while: ");
+i=menor;
+while(i<=mayor){
+    document.write(i+", ");
+    i++
+}
+
+document.write("Con bucle do/while: ");
+i=menor;
+do{
+    document.write(i+", ");
+    i++
+}while(i<=mayor)
+
+</script>
+
+</body>
+
+</html>

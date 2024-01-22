@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hoja 1 Ejercicio 11 (Manuel Ortega Cabrera)</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+<h2>Hoja 1 Ejercicio 11 (Manuel Ortega Cabrera)</h2>
+
+<script>
+
+function Media(a,b){
+    return (a+b)/2;
+}
+
+num1=parseInt(prompt("Introduzca un numero"));
+num2=parseInt(prompt("Introduzca un numero"));
+num3=parseInt(prompt("Introduzca un numero"));
+num4=parseInt(prompt("Introduzca un numero"));
+
+if(Media(num1,num2) > Media(num3,num4)){
+    document.write("La media más alta es la de "+num1+" y "+num2+" ("+Media(num1,num2)+")");
+}else if(Media(num1,num2) < Media(num3,num4)){
+    document.write("La media más alta es la de "+num3+" y "+num4+" ("+Media(num3,num4)+")");
+}else{
+    document.write("Ambas medias son iguales");
+}
+
+</script>
+
+</body>
+
+</html>
