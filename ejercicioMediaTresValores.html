@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Media de 3 valores</p>
+
+<p id="demo"></p>
+
+<script>
+
+  function suma(n1,n2,n3){return (n1+n2+n3);}
+
+  function media(n1,n2,n3){return (suma(n1,n2,n3)/3);}
+
+  function solicitarDatos(){
+    n = prompt("Introduzca un numero");
+    n = parseInt(n);
+    return n;
+  }
+
+  function visualizar(n){document.write("La media es: "+n);}
+
+//PROGRAMA PRINCIPAL
+
+  n1=solicitarDatos();
+  n2=solicitarDatos();
+  n3=solicitarDatos();
+  
+  resultado=media(n1,n2,n3);
+
+  visualizar(resultado);
+
+</script>
+
+</body>
+</html>
