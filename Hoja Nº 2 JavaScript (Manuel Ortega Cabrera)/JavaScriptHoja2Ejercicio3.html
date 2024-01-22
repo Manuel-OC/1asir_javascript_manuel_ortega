@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>JavaScript Hoja 2 Ejercicio 3</p>
+
+<p id="demo"></p>
+
+<script>
+
+function sumarDivisores(n){
+  suma=0;
+
+  for(i=n-1 ; i>=1; i--){
+    if(n%i==0){
+      suma=suma+i;
+    }
+  }
+
+  return suma;
+}
+
+function sonAmigos(n1,n2){
+
+  r1=sumarDivisores(n1);
+  r2=sumarDivisores(n2);
+
+  if(r1==n2 && r2==n1){
+    result=true;
+  }else{
+    result=false;
+  }
+
+  return result;
+}
+
+do{
+  n1 = prompt("Introduzca un numero positivo");
+  n1=parseInt(n1);
+}while(n1<0)
+
+do{
+  n2 = prompt("Introduzca otro numero positivo");
+  n2=parseInt(n2);
+}while(n2<0)
+
+sonAmigos=sonAmigos(n1,n2);
+
+if(sonAmigos==true){document.write("Son amigos!");}
+  else{document.write("No son amigos :(");}
+</script>
+
+</body>
+</html>

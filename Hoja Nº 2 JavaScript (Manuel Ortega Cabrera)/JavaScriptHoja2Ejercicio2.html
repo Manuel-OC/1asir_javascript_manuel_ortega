@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>JavaScript Hoja 2 Ejercicio 2</p>
+
+<p id="demo"></p>
+
+<script>
+
+function sumarDivisores(n){
+  suma=0;
+
+  for(i=n ; i>=1; i--){
+    if(n%i==0){
+      suma=suma+i;
+    }
+  }
+
+  return suma;
+}
+
+n = prompt("Introduzca un numero");
+n=parseInt(n);
+result=sumarDivisores(n);
+
+document.getElementById("demo").innerHTML = result;
+</script>
+
+</body>
+</html>

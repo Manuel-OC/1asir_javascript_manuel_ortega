@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>JavaScript Hoja 2 Ejercicio 5</p>
+
+<p id="demo"></p>
+
+<script>
+
+  function mayorDe600(n){
+
+    if(n >= 600){
+      document.write("Es superior a 600");
+      mayorDe1200(n);
+    }
+
+  }
+
+  function mayorDe1200(n){
+
+    if(n >= 1200){
+      document.write("Es superior a 1200");
+      mayorDe1800(n)
+    }
+
+  }
+
+  function mayorDe1800(n){
+
+    if(n >= 1800){
+      document.write("Es superior a 1800");
+    }
+
+  }
+
+  num = prompt("Introduzca un sueldo");
+  num=parseInt(num);
+
+  mayorDe600(num);
+
+</script>
+
+</body>
+</html>

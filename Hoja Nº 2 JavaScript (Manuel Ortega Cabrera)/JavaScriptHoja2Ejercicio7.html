@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>JavaScript Hoja 2 Ejercicio 6</p>
+
+<p id="demo"></p>
+
+<script>
+
+  function suma(n1,n2){return n1+n2;}
+  function producto(n1,n2){return n1*n2;}
+
+  function compararSumaYProducto(n1,n2){
+
+    if(suma(n1,n2) == producto(n1,n2)){document.write("La suma y el producto son iguales");}
+    if(suma(n1,n2) > producto(n1,n2)){document.write("La suma es superior al producto");}
+    if(suma(n1,n2) < producto(n1,n2)){document.write("La suma es inferior al producto");}
+
+  }
+
+  n1 = prompt("Introduzca un numero");
+  n1=parseInt(n1);
+  n2 = prompt("Introduzca un numero");
+  n2=parseInt(n2);
+
+  compararSumaYProducto(n1,n2);
+
+</script>
+
+</body>
+</html>
