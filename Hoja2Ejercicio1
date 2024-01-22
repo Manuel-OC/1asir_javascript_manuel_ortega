@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>JavaScript Hoja 2 Ejercicio 1</p>
+
+<p id="demo"></p>
+
+<script>
+
+function sumatorioDesdeValorPositivo(n){
+  suma=0;
+
+  for(i=(n-1) ; i>=1 ; i--){
+    suma+=i;
+  }
+
+  return suma;
+}
+
+function sumatorioDesdeValorNegativo(n){
+  suma=0;
+
+  for(i=n+1 ; i<=0 ; i++){
+    suma+=i;
+  }
+
+  return suma;
+}
+
+function seleccionar(n){
+
+  if (n >= 1){
+    result = sumatorioDesdeValorPositivo(n);
+  }else{
+    result = sumatorioDesdeValorNegativo(n);
+  }  
+
+  return result;
+}
+
+n = prompt("Introduzca un numero");
+n=parseInt(n);
+result=seleccionar(n);
+
+document.getElementById("demo").innerHTML = result;
+</script>
+
+</body>
+</html>
