@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manuel Ortega Cabrera</title>
+</head>
+<body>
+<p>JavaScript Hoja 3 Ejercicio 11</p>
+
+<p id="demo"></p>
+
+<script>
+
+  function mejorNota(notas,id1,id2){
+
+    resultado = -1;
+
+    if(notas[id1] > notas[id2]){
+      resultado = id1;
+    }
+    if(notas[id1] < notas[id2]){
+      resultado = id2;
+    }
+
+    return resultado;
+
+  }
+
+  function visualizar(alumnos,resultado){
+
+    if(resultado == -1){
+      document.write("Iguales");
+    }else{
+      document.write("El alumno con mejor nota es "+alumnos[resultado]);
+    }
+
+  }
+
+  notas = [8,7,8];
+  alumnos = ["David","Lolo","Ale"];
+  id1=1;
+  id2=2;
+
+  visualizar(alumnos,mejorNota(notas,id1,id2));
+</script>
+
+</body>
+</html>

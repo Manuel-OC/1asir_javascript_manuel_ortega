@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manuel Ortega Cabrera</title>
+</head>
+<body>
+<p>JavaScript Hoja 3 Ejercicio 9</p>
+
+<p id="demo"></p>
+
+<script>
+
+  function posicionValor(array,valor){
+    posiciones = [];
+    count = 0;
+
+    for(i = 0; i < array.length ; i++){
+      if(valor == array[i]){
+        posiciones[count] = i;
+        count++;
+      }
+    }
+
+    return posiciones;
+  }
+
+  function visualizar(posicion,valor){
+
+    document.write("El valor "+valor+" se encuentra en la/s posicion/es: ");
+    for(i = 0; i < posiciones.length ; i++){
+      document.write(posiciones[i]+", ");
+    }
+
+  }
+
+  array = [0,1,2,3,4,5,0,1,2,3,4,5];
+  valor = prompt("Intriduce un valor");
+  valor = parseInt(valor);
+
+  visualizar(posicionValor(array,valor),valor);
+</script>
+
+</body>
+</html>

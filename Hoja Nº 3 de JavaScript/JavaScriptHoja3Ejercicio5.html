@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manuel Ortega Cabrera</title>
+</head>
+<body>
+<p>JavaScript Hoja 3 Ejercicio 5</p>
+
+<p id="demo"></p>
+
+<script>
+
+  function estanOrdenados(array){
+    let estanOrdenados=true;
+
+    for(i = 1 ; i < array.length ; i++){
+      if(array[i] < array[i-1]){
+        estanOrdenados=false;
+      }
+    }
+
+    return estanOrdenados;
+  }
+
+  function visualizar(estanOrdenados){
+
+    if(estanOrdenados == true){
+      document.write("Estan ordenados");
+    }else{
+      document.write("No estan ordenados");
+    }
+
+  }
+
+  array1=[1000,34,567,222,789,21,567];
+  array2=[30,56,78,123,456,501,680];
+
+  visualizar(estanOrdenados(array1));
+  visualizar(estanOrdenados(array2));
+
+</script>
+
+</body>
+</html>

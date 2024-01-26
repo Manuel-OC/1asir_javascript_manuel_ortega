@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manuel Ortega Cabrera</title>
+</head>
+<body>
+<p>JavaScript Hoja 3 Ejercicio 2</p>
+
+<p id="demo"></p>
+
+<script>
+
+  function suma(array1,array2){
+
+    result = [];
+
+    for(i = 0 ; i < array1.length ; i++){
+      result[i] = array1[i] + array2[i];
+    }
+
+    return result;
+  }
+
+  function visualizar(array){
+
+    for(i = 0; i < array.length ; i++){
+      document.write(array[i]+", ");
+    }
+  }
+
+  array1=[203,97,501,1256,2008,18000,14,764,2456,8000];
+  array2=[1000,34,567,222,789,21,567,888,1000,3002];
+
+  visualizar(suma(array1,array2));
+
+</script>
+
+</body>
+</html>

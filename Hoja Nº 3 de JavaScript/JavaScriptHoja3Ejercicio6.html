@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manuel Ortega Cabrera</title>
+</head>
+<body>
+<p>JavaScript Hoja 3 Ejercicio 6</p>
+
+<p id="demo"></p>
+
+<script>
+
+  function numeroDeCaracteres(tipo,frase){
+    count = 0;
+
+    for(i = 0 ; i < frase.length ; i++){
+      if(tipo.indexOf(frase.charAt(i),0) != -1){
+        count++;;
+      }
+    }
+
+    return count;
+  }
+
+  function visualizar(frase,numericos,alfabeticos){
+
+    document.write("La frase ("+frase+") tiene "+numericos+" caracteres numéricos y "+alfabeticos+" caracteres alfabéticos");
+
+  }
+
+  const numericos = "0123456789";
+  const alfabeticos = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+  var frase="H0la m3 ll4mo Lol0";
+
+  visualizar(frase,numeroDeCaracteres(numericos,frase),numeroDeCaracteres(alfabeticos,frase));
+</script>
+
+</body>
+</html>

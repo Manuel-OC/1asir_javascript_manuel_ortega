@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manuel Ortega Cabrera</title>
+</head>
+<body>
+<p>JavaScript Hoja 3 Ejercicio 1</p>
+
+<p id="demo"></p>
+
+<script>
+
+  function mayoresDe(array,n){
+
+    result = [];
+    count=0;
+
+    for(i = 0 ; i < array.length ; i++){
+      if(array[i] >= n){
+        result[count] = array[i];
+        count++;
+      }
+    }
+
+    return result;
+  }
+
+  function visualizar(array,n){
+
+    document.write("Mayores de "+n+": ");
+
+    for(i = 0; i < array.length ; i++){
+      document.write(array[i]+", ");
+    }
+  }
+
+  array=[203,97,501,1256,2008,18000];
+
+  visualizar(mayoresDe(array,200),200);
+  visualizar(mayoresDe(array,500),500);
+  visualizar(mayoresDe(array,2000),2000);
+
+</script>
+
+</body>
+</html>

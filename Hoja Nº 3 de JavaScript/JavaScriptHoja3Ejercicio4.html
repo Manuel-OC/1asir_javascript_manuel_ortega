@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manuel Ortega Cabrera</title>
+</head>
+<body>
+<p>JavaScript Hoja 3 Ejercicio 4</p>
+
+<p id="demo"></p>
+
+<script>
+
+  function multiplosDe(array,n){
+    count = 0;
+    multiplos = [];
+
+    for(i = 0 ; i < array.length ; i++){
+      if(array[i] % n == 0){
+        multiplos[count] = array[i];
+        count++;
+      }
+    }
+
+    return multiplos;
+  }
+
+  function visualizar(array,n){
+
+    document.write("Multiplos de "+n+": ");
+
+    for(i = 0; i < array.length ; i++){
+      document.write(array[i]+", ");
+    }
+  }
+
+  array=[1000,34,567,222,789,21,567,300];
+
+  visualizar(multiplosDe(array,2),2);
+  visualizar(multiplosDe(array,3),3);
+
+</script>
+
+</body>
+</html>
