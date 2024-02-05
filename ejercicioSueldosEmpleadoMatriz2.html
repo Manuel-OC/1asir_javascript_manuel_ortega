@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<body>
+	
+<script>
+//Guardar en varios arrays los sueldos de empleados sin el nombre//
+//Obtener un array que almacene las medias de cada uno de los empleados//
+
+	//FUNCIONES//
+
+	function Media(tab_sueldos){
+		suma = 0;
+
+		for(i = 0; i < tab_sueldos.length ; i++){
+			suma += tab_sueldos[i];
+		}
+
+		return (suma/(tab_sueldos.length));
+	}
+
+	function obtenerMedias(mat_sueldos){
+
+		medias = [];
+
+		for(k = 0; k < mat_sueldos.length ; k++){
+			medias[k] = Media(mat_sueldos[k]);
+		}
+
+		return medias;
+	}
+
+	function Visualizar(tab_result){
+
+		for(i in tab_result){
+			document.write("La media es "+tab_result[i]+"<br>");
+		}
+
+	}
+
+	//PROGRAMA PRINCIPAL//
+	mat_sueldos = [
+		[1000,1200,1400,1600,1800],
+		[2000,2200,2400,2600,2800],
+		[3000,3200,3400,3600,3800],
+		[4000,4200,4400,4600,4800]
+	];
+
+	tab_result = obtenerMedias(mat_sueldos);
+
+	Visualizar(tab_result);
+
+</script>
+
+
+</body>
