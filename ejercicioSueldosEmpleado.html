@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<body>
+	
+<script>
+//Declarar los sueldos de un empleado y obtener su media//
+//Los sueldos se declaran en un array//
+
+	//FUNCIONES//
+
+	function Media(tab_sueldos){
+		suma = 0;
+
+		for(i = 1; i < tab_sueldos.length ; i++){
+			suma += tab_sueldos[i];
+		}
+
+		return (suma/(tab_sueldos.length-1));
+	}
+
+
+	function Visualizar(resultado,trabajador){
+
+		document.write("La media de sueldos de "+trabajador+" es "+"<br>"+resultado);
+
+	}
+
+
+
+	//PROGRAMA PRINCIPAL//
+
+	tab_sueldos = ['Luis',1000,1000,2000,1000,1000];
+
+	resultado = Media(tab_sueldos);
+
+	Visualizar(resultado,tab_sueldos[0]);
+
+
+</script>
+
+
+</body>
