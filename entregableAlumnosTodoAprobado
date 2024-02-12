@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+	<title>Manuel Ortega Cabrera</title>
+</head>
+
+<body>
+	
+<script>
+//Guardar en varios arrays los sueldos de empleados sin el nombre//
+//Obtener un array que almacene las medias de cada uno de los empleados//
+
+	//FUNCIONES//
+
+	function obtenerAprobados(tab_alumnos){
+
+		aprobados = [];
+		cont=0;
+		aprobo=true;
+
+		for(i = 0; i < tab_alumnos.length ; i++){
+			for(j=1; j<tab_alumnos[i].length ; j++){
+				if(tab_alumnos[i][j]<5){
+					aprobo=false;
+				}
+			}
+			if(aprobo){
+				aprobados[cont] = tab_alumnos[i][0];
+				cont++;
+			}
+			aprobo=true;
+		}
+
+		return aprobados;
+	}
+
+	function Visualizar(result){
+
+		for(i in result){
+			document.write(result[i]+" aprobó todo"+"<br>");
+		}
+
+	}
+
+	//PROGRAMA PRINCIPAL//
+	let tab_alumnos = [
+		["Jose",5,7,8,9],
+		["Luis",9,4,8,9],
+		["Luisa",8,7,8,9]
+		]
+
+	tab_alumnos_aprobados = obtenerAprobados(tab_alumnos);
+	Visualizar(tab_alumnos_aprobados);
+
+</script>
+
+
+</body>
