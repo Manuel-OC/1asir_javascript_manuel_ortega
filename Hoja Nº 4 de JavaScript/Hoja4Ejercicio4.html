@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manuel Ortega</title>
+</head>
+<body>
+	<script>
+
+	function introducirUsuario(){
+		u = prompt("Introduzca un usuario");
+		return u;
+	}
+
+	function introducirClave(){
+		c = prompt("Introduzca su contraseña");
+		return c;
+	}
+
+	function comprobarCredenciales(us,ke,tab_login,tab_claves){
+
+		b = false;
+
+		for(i = 0; i < tab_login.length ; i++){
+			if(tab_login[i] == us){
+				if(tab_claves[i] == ke){
+						b = true;
+				}
+			}
+		}
+
+		return b;
+	}
+
+	function visualizar(correcto){
+		if(correcto){document.write("el usuario SI está correctamente registrado");}
+		else{document.write("inicio de sesión incorrecto");}
+
+	}
+
+	//PROGRAMA PRINCIPAL
+
+	lista_login = ["manu","loli","root","usuario1"];
+	lista_claves = ["1234","loli200","4256","usuario1"];
+
+	user = introducirUsuario();
+	key = introducirClave();
+
+	visualizar(comprobarCredenciales(user,key,lista_login,lista_claves));
+
+	</script>
+</body>
+</html>

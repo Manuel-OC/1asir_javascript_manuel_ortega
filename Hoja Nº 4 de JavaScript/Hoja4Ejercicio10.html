@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manuel Ortega</title>
+</head>
+<body>
+	<script>
+
+	function media(tab){
+
+		sum=0;
+		cont=0;
+
+		for(i = 0; i < tab.length; i++){
+			sum+=tab[i];
+			cont++;
+		}
+
+		return sum/cont;
+
+	}
+
+	function superiores(m,tab){
+
+		sup = [];
+		cont=0;
+
+		for(i = 0; i < tab.length; i++){
+			if(tab[i] >= m){
+				sup[cont] = tab[i];
+				cont++;
+			}
+		}
+
+		return sup;
+
+	}
+
+	function visualizar(s,m){
+
+		document.write("Los valores superiores a la media "+m+" son: "+s);
+
+	}
+
+	//PROGRAMA PRINCIPAL
+
+	lista = [12,5,6,2,43,21,7,15];
+
+	visualizar(superiores(media(lista),lista),media(lista));
+
+	</script>
+</body>
+</html>

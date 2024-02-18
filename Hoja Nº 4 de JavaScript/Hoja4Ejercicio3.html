@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manuel Ortega</title>
+</head>
+<body>
+	<script>
+
+	function cuadrado(tab){
+
+		cuadrados = [];
+
+		for(i = 0; i < tab.length ; i++){
+			cuadrados[i] = tab[i]*tab[i];
+		}
+
+		return cuadrados;
+
+	}
+
+	function visualizar(n){
+		document.write(n+"<br>");
+	}
+
+	//PROGRAMA PRINCIPAL
+
+	array = [2,3,4,8,5];
+
+	visualizar(cuadrado(array));
+
+	</script>
+</body>
+</html>

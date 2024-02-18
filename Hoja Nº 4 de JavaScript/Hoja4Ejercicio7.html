@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manuel Ortega</title>
+</head>
+<body>
+	<script>
+
+	function numerosRepetidos(tab1,tab2){
+
+		repetidos = [];
+		cont=0;
+
+		for(i = 0; i < tab1.length; i++){
+			if(tab1[i] == tab2[i]){
+				repetidos[cont] = tab2[i];
+				cont++;
+			}
+		}
+
+		return repetidos;
+
+	}
+
+	function visualizar(r){
+
+		document.write(r);
+
+	}
+
+	//PROGRAMA PRINCIPAL
+
+	lista1 = [3,6,7,8,9,33];
+	lista2 = [3,4,7,3,9,33];
+
+	visualizar(numerosRepetidos(lista1,lista2));
+
+	</script>
+</body>
+</html>

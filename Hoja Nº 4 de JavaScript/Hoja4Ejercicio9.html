@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manuel Ortega</title>
+</head>
+<body>
+	<script>
+
+	function mediaPosicionesPares(tab){
+
+		sum=0;
+		cont=0;
+
+		for(i = 0; i < tab.length; i=i+2){
+			sum+=tab[i];
+			cont++;
+		}
+
+		return sum/cont;
+
+	}
+
+	function mediaPosicionesImpares(tab){
+
+		sum=0;
+		cont=0;
+
+		for(i = 1; i < tab.length; i=i+2){
+			sum+=tab[i];
+			cont++;
+		}
+
+		return sum/cont;
+
+	}
+
+	function visualizar(m){
+
+		document.write(m+"<br>");
+
+	}
+
+	//PROGRAMA PRINCIPAL
+
+	lista = [3,5,4,8,6,4,7,11];
+
+	visualizar(mediaPosicionesPares(lista));
+	visualizar(mediaPosicionesImpares(lista));
+
+	</script>
+</body>
+</html>

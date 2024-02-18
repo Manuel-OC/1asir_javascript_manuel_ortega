@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manuel Ortega</title>
+</head>
+<body>
+	<script>
+
+	function empleadosQueCobranMasDe2000(tab){
+
+		empleados = [];
+		cont=0;
+
+		for(i = 0; i < tab.length; i++){
+			if(tab[i] > 2000){
+				empleados[cont] = i;
+				cont++;
+			}
+		}
+
+		return empleados;
+
+	}
+
+	function visualizar(e){
+
+		document.write("Los empleados "+e+" cobran más de 2000");
+
+	}
+
+	//PROGRAMA PRINCIPAL
+
+	lista = [1000,2000,2001,3000,500];
+
+	visualizar(empleadosQueCobranMasDe2000(lista));
+
+	</script>
+</body>
+</html>
