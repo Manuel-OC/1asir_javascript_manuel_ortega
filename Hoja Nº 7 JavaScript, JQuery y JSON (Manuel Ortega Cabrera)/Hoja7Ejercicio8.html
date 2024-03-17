@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>Manuel Ortega</title>
+
+	<style>
+		div#Positivo{
+			width: 300px;
+			height: 300px;
+			background-color: green;
+		}
+		div#Negativo{
+			width: 300px;
+			height: 300px;
+			background-color: red;
+		}
+	</style>
+
+	<script>
+
+	$(document).ready(function(){
+
+		$("#Positivo").hide();
+		$("#Negativo").hide();
+
+		$("#comprobar").click(function(){
+			n = parseInt($("#numero").val());
+
+			if(n > 0){
+				$("#Positivo").show();
+				$("#Negativo").hide();
+			}
+			else if(n < 0){
+				$("#Negativo").show();
+				$("#Positivo").hide();
+			}
+		});
+
+	});
+
+	</script>
+
+</head>
+<body>
+
+	<form id="form1">
+
+		<span id="caja_numero1">Número
+		<input type="number" id="numero" value="">
+		</span>
+
+		<input type="button" id="comprobar" value="COMPROBAR">
+	</form>
+
+	<div id="Positivo">Es positivo</div>
+	<div id="Negativo">Es negativo</div>
+
+</body>
+</html>

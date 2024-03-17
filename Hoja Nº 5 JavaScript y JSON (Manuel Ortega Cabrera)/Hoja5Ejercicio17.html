@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+
+	function solicitarNumero(){
+		n = parseInt(prompt("Introduzca un número"));
+		return n;
+	}
+
+	function sumaPares(n1,n2){
+		sum = 0;
+
+		if(n1 >= n2){
+			mayor = n1;
+			menor = n2
+		}else{
+			mayor = n2;
+			menor = n1;
+		}
+
+		for(i = menor+1 ; i < mayor ; i++){
+			if(i%2==0){sum += i;}
+		}
+
+		return sum;
+		
+	}
+
+	function Visualizar(result){
+
+		document.write(result);
+
+	}
+
+	Visualizar(sumaPares(solicitarNumero(),solicitarNumero()));
+
+</script>
+
+</body>
+</html>

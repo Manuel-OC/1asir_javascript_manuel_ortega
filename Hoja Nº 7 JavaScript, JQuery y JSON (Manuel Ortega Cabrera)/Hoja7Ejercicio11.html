@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>Manuel Ortega</title>
+
+	<script>
+
+	$(document).ready(function(){
+
+		array = [];
+		cont = 0;
+
+		$("#guardar").click(function(){
+			array[cont] = $("#numero").val();
+			cont++;
+			alert("Número "+$("#numero").val()+" guardado correctamente")
+		});
+		$("#visualizar").click(function(){
+			alert(array);
+		});
+
+	});
+
+	</script>
+
+</head>
+<body>
+
+	<input type="number" id="numero" val=""/>
+
+	<div><input type="button" id="guardar" value="Guardar Número"></div>
+	<div><input type="button" id="visualizar" value="Visualizar Números"></div>
+
+</body>
+</html>

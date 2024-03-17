@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<head>
+	
+</head>
+<body>
+
+<script>
+
+	function Repetidos(tab1,tab2){
+
+		aux=[];
+		cont=0;
+
+		for(i = 0; i < tab1.length ; i++){
+			if(tab1[i] == tab2[i]){
+				aux[cont] = tab1[i];
+				cont++;
+			}
+		}
+
+		return aux;
+
+	}
+	
+	function nRepetidos(tab1,tab2){
+	
+		cont=0;
+
+		for(j = 0; j < tab1.length ; j++){
+			if(tab1[j] == tab2[j]){
+				cont++;
+			}
+		}
+
+		return cont;
+
+	}
+
+	function Visualizar(result,n){
+		document.write(n+" valores, es decir los valores "+result);
+	}
+
+
+	array1 = [3,6,7,8,9,33];
+	array2 = [3,4,7,3,9,33];
+
+	Visualizar(Repetidos(array1,array2),nRepetidos(array1,array2));
+
+</script>
+
+</body>

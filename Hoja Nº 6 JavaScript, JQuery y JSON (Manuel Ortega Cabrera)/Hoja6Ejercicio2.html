@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>Manuel Ortega</title>
+
+	<script>
+
+	$(document).ready(function(){
+
+		$("#sumar").click(function(){
+			n1 = parseInt($("#numero1").val());
+			n2 = parseInt($("#numero2").val());
+			document.write(n1+n2);
+		});
+
+	});
+
+	</script>
+
+</head>
+<body>
+
+	<form id="form1">
+
+		<span id="caja_numero1">Número 1
+		<input type="number" id="numero1" value="">
+		</span>
+
+		<span id="caja_numero2">Número 2
+		<input type="number" id="numero2" value="">
+		</span>
+
+		<input type="button" id="sumar" value="SUMAR">
+	</form>
+
+</body>
+</html>

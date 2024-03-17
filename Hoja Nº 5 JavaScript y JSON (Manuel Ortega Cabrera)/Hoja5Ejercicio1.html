@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hoja 5 Ejercicio 1</title>
+</head>
+<body>
+
+<script>
+	
+	function Desordenar(array){
+		tab2 = [];
+		cont = 0;
+
+		for(i = array.length-1 ; i >= 0; i--){
+			tab2[cont] = array[i];
+			cont++;
+		}
+
+		return tab2;
+	}
+
+	function Visualizar(a){
+		for(j = 0; j < a.length; j++){
+			document.write(a[j]+", ");
+		}
+	}
+
+	tab1 = [2,44,5,6,7,8,9];
+
+	Visualizar(Desordenar(tab1));
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<head>
+	
+</head>
+<body>
+
+<script>
+
+	function mayoresDe(tab){
+
+		aux=[];
+		cont=0;
+
+		for(i = 0; i < tab.length ; i++){
+			if(tab[i].precio > 100){
+				aux[cont] = tab[i].producto;
+				cont++;
+			}
+		}
+
+		return aux;
+
+	}
+	
+	function Visualizar(result){
+		document.write(result+"<br>");
+	}
+
+
+	const productos = '[{'+
+	'"producto": "disco_duro",'+
+	'"precio": 95'+
+	'},'+
+	'{'+
+	'"producto": "ordenador",'+
+	'"precio": 600'+
+	'},'+
+	'{'+
+	'"producto": "monitor",'+
+	'"precio": 250'+
+	'}]';
+
+	const array = JSON.parse(productos);
+
+	Visualizar(mayoresDe(array));
+
+</script>
+
+</body>

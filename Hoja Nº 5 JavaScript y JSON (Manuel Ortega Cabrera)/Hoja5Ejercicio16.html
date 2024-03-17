@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+
+	function solicitarNombre(){
+		nombre = prompt("Introduzca un nombre");
+		return nombre;
+	}
+
+	function existeElNombre(tab,n){
+
+		existe = false;
+
+		for(i = 0; i < tab.length ; i++){
+			if(tab[i] == n){
+				existe = true;
+				break;
+			}
+		}
+
+		return existe;
+
+	}
+
+	function Visualizar(result){
+
+		if(result == true){document.write("El nombre está en la lista");}
+		else{document.write("El nombre no está en la lista");}
+	}
+
+	array=["Lolo","Chester","Cristina","Javi","Guille"];
+
+	Visualizar(existeElNombre(array,solicitarNombre()));
+
+</script>
+
+</body>
+</html>

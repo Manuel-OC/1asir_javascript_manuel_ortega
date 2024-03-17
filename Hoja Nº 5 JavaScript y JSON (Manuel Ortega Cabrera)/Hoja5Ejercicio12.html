@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+
+	function Suma(tab){
+
+		sum = 0;
+
+		for(i = 0 ; i < tab.length ; i++){
+			sum+=tab[i].contagios;
+		}
+
+		return sum;
+	}
+
+
+	function Visualizar(result){
+		document.write(result);
+	}
+
+	const covid = '[{'+
+	'"localidad": "Chiclana",'+
+	'"contagios": 130'+
+	'},'+
+	'{'+
+	'"localidad": "Conil",'+
+	'"contagios": 220'+
+	'},'+
+	'{'+
+	'"localidad": "San Fernando",'+
+	'"contagios": 300'+
+	'}]';
+
+	const array = JSON.parse(covid);
+
+	Visualizar(Suma(array))
+</script>
+
+</body>
+</html>

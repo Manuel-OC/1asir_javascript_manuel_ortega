@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$("#numero").change(function(){
+				var n = $("#numero").val();
+				if (n >= 0){
+					$("#resultado").text("Es positivo");
+					$("#resultado").removeClass("verde");
+					$("#resultado").removeClass("rojo");
+					$("#resultado").addClass("verde");                 
+				}
+				else {
+					$("#resultado").text("Es negativo");
+					$("#resultado").removeClass("verde");
+					$("#resultado").removeClass("rojo");
+					$("#resultado").addClass("rojo");
+				}
+			});
+		});
+	</script>
+
+	<style>
+		.rojo{
+			background-color: red;
+		}
+
+		.verde{
+			background-color: green;
+		}
+
+		#resultado{
+			height: 300px;
+			width: 300px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<input type="number" id="numero" name="numero"/>
+
+	<div id="resultado"></div>
+
+</body>
+</html>

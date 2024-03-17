@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<head>
+	
+</head>
+<body>
+
+<script>
+
+	function Iguales(tab1,tab2){
+
+		iguales = true;
+
+		if(tab1.length != tab2.length){iguales=false;}
+		else{
+			for(i = 0; i < tab1.length ; i++){
+				if(tab1[i] != tab2[i]){
+					iguales=false;
+				}
+			}
+		}
+
+		return iguales;
+
+	}
+
+	function Visualizar(result){
+		if(result==true){document.write("SI, son iguales");}
+		else{document.write("NO, no son iguales");}
+	}
+
+
+	array1 = [3,6,7,8,9,33];
+	array2 = [3,6,7,8,9,33];
+
+	Visualizar(Iguales(array1,array2));
+
+</script>
+
+</body>

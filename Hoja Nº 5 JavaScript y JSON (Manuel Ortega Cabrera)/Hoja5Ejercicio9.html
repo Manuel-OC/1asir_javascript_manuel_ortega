@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<head>
+	
+</head>
+<body>
+
+<script>
+
+	function Negativos(tab){
+
+		aux=[];
+		cont=0;
+
+		for(i = 0; i < tab.length ; i++){
+			if(tab[i] < 0){
+				aux[cont] = tab[i];
+				cont++;
+			}
+		}
+
+		return aux;
+
+	}
+
+	function Positivos(tab){
+
+		aux=[];
+		cont=0;
+
+		for(i = 0; i < tab.length ; i++){
+			if(tab[i] > 0){
+				aux[cont] = tab[i];
+				cont++;
+			}
+		}
+
+		return aux;
+
+	}
+	
+	function Visualizar(result){
+		document.write(result+"<br>");
+	}
+
+
+	array = [1,-2,3,-4,5,-6];
+
+	Visualizar(Negativos(array));
+	Visualizar(Positivos(array));
+
+</script>
+
+</body>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+
+	function nCeros(tab){
+
+		sum = 0;
+
+		for(i = 0; i < tab.length ; i++){
+			if(tab[i] == 0){sum++;}
+		}
+
+		return sum;
+	}
+
+
+	function Visualizar(result){
+		document.write("Hay "+result+" ceros");
+	}
+
+	array = [3,-6,0,-8,0,1,9];
+
+	Visualizar(nCeros(array));
+	
+</script>
+
+</body>
+</html>

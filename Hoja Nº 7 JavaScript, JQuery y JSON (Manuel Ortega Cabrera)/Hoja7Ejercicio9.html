@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>Manuel Ortega</title>
+
+	<style>
+		table{
+			display: inline;
+		}
+		td{
+			display: block;
+		}
+	</style>
+
+	<script>
+
+	$(document).ready(function(){
+
+		$("#boton1").click(function(){$("#impares").append("<tr><td>1</td></tr>");});
+		$("#boton2").click(function(){$("#pares").append("<tr><td>2</td></tr>");});
+		$("#boton3").click(function(){$("#impares").append("<tr><td>3</td></tr>");});
+		$("#boton4").click(function(){$("#pares").append("<tr><td>4</td></tr>");});
+		$("#boton5").click(function(){$("#impares").append("<tr><td>5</td></tr>");});
+		$("#boton6").click(function(){$("#pares").append("<tr><td>6</td></tr>");});
+		$("#boton7").click(function(){$("#impares").append("<tr><td>7</td></tr>");});
+		$("#boton8").click(function(){$("#pares").append("<tr><td>8</td></tr>");});
+		$("#boton9").click(function(){$("#impares").append("<tr><td>9</td></tr>");});
+		$("#boton10").click(function(){$("#pares").append("<tr><td>10</td></tr>");});
+
+	});
+
+	</script>
+
+</head>
+<body>
+
+	<input type="button" id="boton1" value="UNO">
+	<input type="button" id="boton2" value="DOS">
+	<input type="button" id="boton3" value="TRES">
+	<input type="button" id="boton4" value="CUATRO">
+	<input type="button" id="boton5" value="CINCO">
+	<input type="button" id="boton6" value="SEIS">
+	<input type="button" id="boton7" value="SIETE">
+	<input type="button" id="boton8" value="OCHO">
+	<input type="button" id="boton9" value="NUEVE">
+	<input type="button" id="boton10" value="DIEZ">
+
+	<p></p>
+
+	<table id="impares">
+		<tr>
+			<td>Impares</td>
+		</tr>
+	</table>
+	<table id="pares">
+		<tr>
+			<td>Pares</td>
+		</tr>
+	</table>
+
+</body>
+</html>

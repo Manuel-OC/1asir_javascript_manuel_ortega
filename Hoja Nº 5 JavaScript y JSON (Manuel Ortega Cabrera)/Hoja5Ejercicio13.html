@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+
+	function Suma(tab){
+
+		sum = 0;
+
+		for(i = 0 ; i < tab.length ; i++){
+			sum+=tab[i];
+		}
+
+		return sum;
+	}
+
+
+	function Visualizar(n,result){
+		document.write("Sublista "+(n+1)+": "+result+"<br>");
+	}
+
+	matriz=[[1,1,2,3,4],
+			[2,2,2],
+			[3,3,3],
+			[4,4,4]];
+
+	Visualizar(0,Suma(matriz[0]));
+	Visualizar(1,Suma(matriz[1]));
+	Visualizar(2,Suma(matriz[2]));
+	Visualizar(3,Suma(matriz[3]));
+</script>
+
+</body>
+</html>

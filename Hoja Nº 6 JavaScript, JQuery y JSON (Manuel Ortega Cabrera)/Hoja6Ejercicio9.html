@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>Manuel Ortega</title>
+
+	<script>
+
+	$(document).ready(function(){
+
+		$(".boton").click(function(){
+			if($(".boton").val() == "Ver texto"){texto = "Ocultar texto";}
+			if($(".boton").val() == "Ocultar texto"){texto = "Ver texto";}
+
+			$(".boton").val(texto);
+		});
+
+	});
+
+	</script>
+
+</head>
+<body>
+
+	<div><input type="button" class="boton" value="Ver texto"></div>
+
+</body>
+</html>

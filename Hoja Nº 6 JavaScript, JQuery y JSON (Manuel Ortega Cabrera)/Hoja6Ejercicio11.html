@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>Manuel Ortega</title>
+
+	<script>
+
+	$(document).ready(function(){
+
+		function empleadoConMenorSueldo(n,s){
+			empleado = n[0];
+			aux = s[0];
+
+			for(i = 1; i < n.length ; i++){
+				if (s[i] < aux){
+					empleado = n[i];
+					aux = s[i];
+				}
+			}
+
+			return empleado;
+		}
+
+		function Visualizar(r){
+			document.write(r);
+		}
+
+		nombres = ["Lolo","David","Ale","Migue","Juan Diego"];
+		sueldos = [2400,1200,3000,1500,3500];
+
+		$(".boton").click(function(){
+			Visualizar(empleadoConMenorSueldo(nombres,sueldos));
+		});
+
+	});
+
+	</script>
+
+</head>
+<body>
+
+	<div><input type="button" class="boton" value="Ver empleado con menor sueldo"></div>
+
+</body>
+</html>

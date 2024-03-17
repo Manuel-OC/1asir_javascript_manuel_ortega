@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<head>
+	
+</head>
+<body>
+
+<script>
+
+	function Media(tab){
+		sum = 0;
+
+		sum+=tab.nota1EV;
+		sum+=tab.nota2EV;
+		sum+=tab.nota3EV;
+
+		return sum/3;
+	}
+
+	function Visualizar(result){
+		document.write(result);
+	}
+
+
+	const alumno = '{'+
+	'"nombre": "Manuel",'+
+	'"nota1EV": 6,'+
+	'"nota2EV": 9,'+
+	'"nota3EV": 4'+
+	'}';
+
+	const objetoAlumno = JSON.parse(alumno);
+
+	Visualizar(Media(objetoAlumno));
+</script>
+
+</body>

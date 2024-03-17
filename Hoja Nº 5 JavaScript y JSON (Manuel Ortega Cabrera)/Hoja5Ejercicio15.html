@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+
+	function Visualizar(n,mat){
+
+		longitud = mat.length;
+
+		document.write("1ª elemento de la sublista "+(n+1)+": "+mat[0]+"<br>"+"Último elemento de la sublista "+(n+1)+": "+mat[longitud-1]+"<br>");
+	}
+
+	matriz=[[1,1,2,3,4],
+			[2,2,2],
+			[3,3,3],
+			[4,4,4]];
+
+	Visualizar(0,matriz[0]);
+	Visualizar(1,matriz[1]);
+	Visualizar(2,matriz[2]);
+	Visualizar(3,matriz[3]);
+</script>
+
+</body>
+</html>

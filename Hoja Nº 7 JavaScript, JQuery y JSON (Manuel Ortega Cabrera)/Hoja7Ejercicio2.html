@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>Manuel Ortega</title>
+
+	<script>
+
+	$(document).ready(function(){
+
+		$("#p1aux").hide();
+		$("#p2aux").hide();
+		$("#p3aux").hide();
+		$("#arriba1").hide();
+		$("#arriba2").hide();
+		$("#arriba3").hide();	
+
+		$("#p1").click(function(){
+			$("#p1aux").slideToggle();
+			$("#arriba1").toggle();
+			$("#abajo1").toggle();
+		});
+
+		$("#p2").click(function(){
+			$("#p2aux").slideToggle();
+			$("#arriba2").toggle();
+			$("#abajo2").toggle();
+		});
+
+		$("#p3").click(function(){
+			$("#p3aux").slideToggle();
+			$("#arriba3").toggle();
+			$("#abajo3").toggle();
+		});
+	});
+
+	</script>
+
+</head>
+<body>
+
+
+	<form id="form1">
+		<span>
+			<p id="p1">Pulsa aquí
+				<img id="abajo1" src="flecha_abajo.png"></img>
+				<img id="arriba1" src="flecha_arriba.png"></img>
+			</p>
+			<p id="p1aux">holi</p>
+		</span>
+		<span>
+			<p id="p2">Pulsa aquí
+				<img id="abajo2" src="flecha_abajo.png"></img>
+				<img id="arriba2" src="flecha_arriba.png"></img>
+			</p>
+			<p id="p2aux">holi</p>
+		</span>
+		<span>
+			<p id="p3">Pulsa aquí
+				<img id="abajo3" src="flecha_abajo.png"></img>
+				<img id="arriba3" src="flecha_arriba.png"></img>
+			</p>
+			<p id="p3aux">holi</p>
+		</span>
+	</form>
+
+</body>
+</html>
