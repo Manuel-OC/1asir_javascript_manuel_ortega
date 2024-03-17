@@ -1,0 +1,94 @@
+<!--Hacer un array con valores numéricos, se pide al usuario un valor numérico y se informa si dicho valor está o no 
+en el array. Se repite ésto hasta que se pulsa un botón de finalizar y entonces aparecerán dos columnas, una con lo valores
+negativos introducidos y otra con los positivos-->
+
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>Manuel Ortega</title>
+
+	<style>
+		table{
+			display: inline;
+		}
+		td{
+			display: block;
+		}
+	</style>
+
+	<script>
+
+		$(document).ready(function(){
+
+			array = [0,1,2,3,4,5,6,7,8,9];
+			almacenPares = [];
+			almacenImpares = [];
+			contPares = 0;
+			contImpares = 0;
+			n = 0;
+
+			$("#comprobar").click(function(){
+				
+				n = $("#numero").val();
+				encontrado = false;
+
+				for (let i = 0; i < array.length ; i++){
+					if(array[i] == n){
+						encontrado = true;
+					}
+				}
+
+				if(encontrado){alert("El numero SI está en el array");}
+				else{alert("El numero NO está en el array");}
+
+				if(n%2 == 0){
+					almacenPares[contPares] = "<tr><td>"+n+"</td></tr>"; 
+					contPares++;
+				}else{
+					almacenImpares[contImpares] = "<tr><td>"+n+"</td></tr>"; 
+					contImpares++;
+				}	
+
+			});
+
+			$("#finalizar").click(function(){
+				for(j = 0; j < almacenImpares.length ; j++){
+					$("#impares").append(almacenImpares[j]);
+				}
+				for(k = 0; k < almacenPares.length ; k++){
+					$("#pares").append(almacenPares[k]);
+				}
+			});
+
+		});
+
+	</script>
+
+</head>
+<body>
+
+	<input type="number" id="numero" value="">
+
+	<input type="button" id="comprobar" value="COMPROBAR">
+
+	<input type="button" id="finalizar" value="FINALIZAR">
+
+	<p></p>
+
+	<table id="impares">
+		<tr>
+			<td>Impares</td>
+		</tr>
+	</table>
+	<table id="pares">
+		<tr>
+			<td>Pares</td>
+		</tr>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!--Hacer ejercicion con JSON y JQuery que haga un cuestionario tipo test y, al final, te diga
+cuantas acertaste y las no acertadas junto con la respuesta correcta. Hace falta botón validar-->
+
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>Manuel Ortega</title>
+
+	<style>
+
+	</style>
+
+	<script>
+
+		$(document).ready(function(){
+
+			var respuesta1 = null;
+			var respuesta2 = null;
+			var respuesta3 = null;
+			var acertadas = 0;
+
+			const respuestas = '[{'+
+			'"respuesta": "Madrid"'+
+			'},'+
+			'{'+
+			'"respuesta": "Berlín"'+
+			'},'+
+			'{'+
+			'"respuesta": "Lisboa"'+
+			'}]';
+
+			const array = JSON.parse(respuestas);
+
+			function comprobarRespuesta(r){
+				switch (r){
+				case 1:
+					if(array[0].respuesta == respuesta1){acertadas++;}
+					else{
+						$("p").append("La respuesta correcta a la pregunta uno era "+array[0].respuesta+", usted ha respondido "+respuesta1+"<br>");
+					}
+					break;
+				case 2:
+					if(array[1].respuesta == respuesta2){acertadas++;}
+					else{
+						$("p").append("La respuesta correcta a la pregunta dos era "+array[1].respuesta+", usted ha respondido "+respuesta2+"<br>");
+					}
+					break;
+				case 3:
+					if(array[2].respuesta == respuesta3){acertadas++;}
+					else{
+						$("p").append("La respuesta correcta a la pregunta tres era "+array[2].respuesta+", usted ha respondido "+respuesta3+"<br>");
+					}
+					break;
+				}
+			}
+
+			function final(){
+				$("p").append("Ha acertado "+acertadas+" preguntas <br>");
+			}
+
+			$(".pregunta1").click(function(){
+				respuesta1 = $(this).val();
+			});
+			$(".pregunta2").click(function(){
+				respuesta2 = $(this).val();
+			});
+			$(".pregunta3").click(function(){
+				respuesta3 = $(this).val();
+			});
+
+			$("#validar").click(function(){
+				comprobarRespuesta(1);
+				comprobarRespuesta(2);
+				comprobarRespuesta(3);
+				final();
+			})
+
+		});
+
+	</script>
+
+</head>
+<body>
+
+	<li>¿Cuál es la capital de España?
+	  <ul>
+	  <li><input type="radio" class="pregunta1" value="Bilbao" />Bilbao</li>
+	  <li><input type="radio" class="pregunta1" value="Madrid" />Madrid</li>
+	  <li><input type="radio" class="pregunta1" value="Barcelona" />Barcelona</li>
+	  </ul>
+	</li>
+
+	<li>¿Cuál es la capital de Alemania?
+	  <ul>
+	  <li><input type="radio" class="pregunta2" value="Berlín" />Berlín</li>
+	  <li><input type="radio" class="pregunta2" value="Múnich" />Múnich</li>
+	  <li><input type="radio" class="pregunta2" value="Hamburgo" />Hamburgo</li>
+	  </ul>
+	</li>
+
+	<li>¿Cuál es la capital de Portugal?
+	  <ul>
+	  <li><input type="radio" class="pregunta3" value="Oporto" />Oporto</li>
+	  <li><input type="radio" class="pregunta3" value="Laos" />Laos</li>
+	  <li><input type="radio" class="pregunta3" value="Lisboa" />Lisboa</li>
+	  </ul>
+	</li>
+
+	<button id="validar">VALIDAR</button>
+
+	<p></p>
+
+</body>
+</html>
