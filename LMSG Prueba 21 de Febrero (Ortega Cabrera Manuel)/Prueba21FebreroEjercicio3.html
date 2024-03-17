@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>Manuel Ortega</title>
+
+	<script>
+
+	$(document).ready(function(){
+		
+		$("#imagendia").hide();
+		$("#imagennoche").hide();
+
+		$("#dia").click(function(){
+			$("#imagendia").show();
+			$("#imagennoche").hide();
+		});
+
+		$("#noche").click(function(){
+			$("#imagendia").hide();
+			$("#imagennoche").show();
+		});
+
+	});
+
+	</script>
+
+</head>
+<body>
+
+
+	<form id="form1">
+		<input type="button" id="dia" value="DIA">
+
+		<input type="button" id="noche" value="NOCHE">
+	</form>
+
+		<img src="dia.jpg" id="imagendia"></img>
+		<img src="noche.jpg" id="imagennoche"></img>
+
+</body>
+</html>

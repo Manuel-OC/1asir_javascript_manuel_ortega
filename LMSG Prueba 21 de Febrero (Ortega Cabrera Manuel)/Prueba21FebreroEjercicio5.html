@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manuel Ortega</title>
+</head>
+<body>
+
+<script>
+
+	function cogerNegativos(tab){
+
+		tab2 = [];
+		cont=0;
+
+		for(i = 0; i < tab.length ; i++){
+			if(tab[i] < 0){
+				tab2[cont] = tab[i];
+				cont++;
+			}
+		}
+
+		return tab2;
+
+	}
+
+	function Media(tab3){
+
+		sum = 0;
+
+		for(i = 0; i < tab3.length ; i++){
+			sum = sum + tab3[i];
+		}
+
+		return sum/tab3.length;
+	}
+	
+	function Visualizar(result){
+		document.write(result+"<br>");
+	}
+
+	array = [1,2,-1,-2,3,-3];
+	array2 = [];
+
+	array2 = cogerNegativos(array);
+
+	m = Media(array2);
+
+	Visualizar(array2);
+	Visualizar(m);
+
+</script>
+
+</body>

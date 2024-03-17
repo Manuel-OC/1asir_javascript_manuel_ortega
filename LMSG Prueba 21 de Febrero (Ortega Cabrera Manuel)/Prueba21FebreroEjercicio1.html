@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manuel Ortega</title>
+</head>
+<body>
+
+	<script>
+
+		function solicitarNumero(){
+			numero = parseInt(prompt("Introduzca un numero"));
+
+			return numero;
+		}
+
+		function Buscar(num,array){
+
+			encontrado = false;
+
+			for(let i = 0 ; i < array.length ; i++){
+				if(num == array[i]){
+					encontrado = true;
+				}
+			}
+
+			return encontrado;
+		}
+
+		function Visualizar(result){
+			if(result==true){document.write("Encontrado");}
+			else{document.write("No encontrado");}
+		}
+
+		/////PROGRAMA PRINCIPAL
+
+		array = [1,2,3,4,5,6,7,8,9,10];
+
+		n = solicitarNumero();
+
+		result = Buscar(n,array);
+
+		Visualizar(result);
+
+	</script>
+
+</body>
+</html>

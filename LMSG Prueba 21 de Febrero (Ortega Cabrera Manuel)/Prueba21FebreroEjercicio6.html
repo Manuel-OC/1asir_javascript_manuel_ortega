@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<head>
+	
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script>
+
+	function mesesMenoresDe1000(tab){
+
+		for(i = 0; i < tab.length ; i++){
+			if(tab[i].contagios < 1000){
+				document.write(tab[i].mes);
+			}
+		}
+
+	}
+
+	function Media(tab2){
+
+		sum = 0;
+
+		for(j = 0; j < tab2.length ; j++){
+			sum = sum + tab2[j].contagios;
+		}
+
+		return sum/tab2.length;
+	}
+	
+	function Visualizar(result){
+		document.write(result+"<br>");
+	}
+
+
+	const covid = '[{'+
+	'"mes": "Enero",'+
+	'"contagios": 2000'+
+	'},'+
+	'{'+
+	'"mes": "Febrero",'+
+	'"contagios": 500'+
+	'},'+
+	'{'+
+	'"mes": "Marzo",'+
+	'"contagios": 1500'+
+	'},'+
+	'{'+
+	'"mes": "Abril",'+
+	'"contagios": 1500'+
+	'},'+
+	'{'+
+	'"mes": "Mayo",'+
+	'"contagios": 3500'+
+	'},'+
+	'{'+
+	'"mes": "Junio",'+
+	'"contagios": 500'+
+	'},'+
+	'{'+
+	'"mes": "Julio",'+
+	'"contagios": 500'+
+	'},'+
+	'{'+
+	'"mes": "Agosto",'+
+	'"contagios": 1500'+
+	'},'+
+	'{'+
+	'"mes": "Septiembre",'+
+	'"contagios": 6500'+
+	'},'+
+	'{'+
+	'"mes": "Octubre",'+
+	'"contagios": 4500'+
+	'},'+
+	'{'+
+	'"mes": "Noviembre",'+
+	'"contagios": 600'+
+	'},'+
+	'{'+
+	'"mes": "Diciembre",'+
+	'"contagios": 1500'+
+	'}]';
+
+	const array = JSON.parse(covid);
+
+	Visualizar(mesesMenoresDe1000(array));
+	Visualizar(Media(array));
+</script>
+
+</body>
