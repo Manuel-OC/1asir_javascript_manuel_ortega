@@ -1,0 +1,81 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+
+		function Media(tab){
+
+			sum = 0;
+
+			for(i = 1; i < tab.length ; i++){
+				sum+=tab[i];
+			}
+
+
+			return sum/tab.length;
+
+		}
+
+		function VisualizarMediaAprobada(mat){
+
+			document.write("Alumnos con media aprobada: ");
+
+			for(j = 0; j < mat.length ; j++){
+				if(Media(mat[j]) >= 5){
+					document.write(mat[j][0]+", ");
+				}
+			}
+
+			document.write("<br>");
+		}
+
+		function AlumnoMasDispar(tabla){
+
+			var alum;
+			var max;
+			var min;
+			var diferenciaAUX = 0;
+			var diferencia = 0;
+
+			for (k = 0; k < tabla.length ; k++){
+				min = 1000;
+				max = -1000;
+				for(l = 1; l < tabla[k].length; l++){
+					if(tabla[k][l] < min){
+						min = tabla[k][l];
+					}
+					if(tabla[k][l] > max){
+						max = tabla[k][l];
+					}
+				}
+				diferencia = max-min;
+				if (diferenciaAUX < diferencia){
+					diferenciaAUX = diferencia;
+					alum = tabla[k][0];
+				}
+			}
+
+			document.write("Alumno con notas más dispares: "+alum);
+
+		}
+
+		matriz = [["Lolo",9,8,9,9,10,8],
+				  ["David",1,5,5,7,2,3],
+				  ["Ale",5,6,4,9,1,3]];
+
+		VisualizarMediaAprobada(matriz);
+		AlumnoMasDispar(matriz);
+
+
+	</script>
+
+</body>
+</html>

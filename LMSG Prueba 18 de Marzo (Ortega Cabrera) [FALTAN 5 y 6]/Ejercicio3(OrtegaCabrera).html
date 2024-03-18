@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>Manuel Ortega</title>
+
+	<script>
+
+		$(document).ready(function(){
+
+			logins_correctos = [];
+			cont = 0;
+
+			$("#comprobar").click(function(){
+
+				lista_login = ["manu","loli","root","usuario1"];
+				lista_claves = ["1234","loli200","4256","usuario1"];
+				
+				user = $("#texto1").val();
+				key = $("#texto2").val();
+				
+
+				b = false;
+
+				for(i = 0; i < lista_login.length ; i++){
+					if(lista_login[i] == user){
+						if(lista_claves[i] == key){
+								b = true;
+						}
+					}
+				}
+
+				if(b==true){
+					$("p").append("el usuario SI está correctamente registrado<br>");
+					logins_correctos[cont] = user;
+					cont++;
+				}
+				else{$("p").append("inicio de sesión incorrecto<br>");}
+
+				if(user == "admin" && key == "clave_admin"){
+					$("p").append("Usuarios correctamente logueados: "+logins_correctos);
+				}
+
+			});
+
+		});
+
+	</script>
+
+</head>
+<body>
+
+	<input type="text" id="texto1" value="">
+	<input type="text" id="texto2" value="">
+
+	<input type="button" id="comprobar" value="COMPROBAR">
+
+	<p></p>
+
+</body>
+</html>
