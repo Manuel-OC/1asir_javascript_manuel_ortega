@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<head>
+	
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script>
+
+	function calcularPrecio(h){
+		precio = 0;
+
+		if(h.zona == "A"){
+			precio = (h.metros*1000 + h.habitaciones * 5000) * (1 - ((2024-h.ano)/100));
+		} else {
+			precio = (h.metros*1000 + h.habitaciones * 5000) * (1 - ((2024-h.ano)/100)) * 1.5;	
+		}
+
+		return precio;
+	}
+
+	function habitacionesMenoresPresupuesto(tab,p){
+
+		prec = 0;
+		cont = 0;
+		anos = [];
+		metros = [];
+		habitaciones = [];
+		zonas = [];
+		precios = [];
+		nuevaMatriz = [];
+
+		for(i = 0; i < tab.length ; i++){
+			prec = calcularPrecio(tab[i]);
+
+			if(prec < presupuesto){
+				anos = ["ano",tab[i].ano];
+				metros = ["metros",tab[i].metros];
+				habitaciones = ["habitaciones",tab[i].habitaciones];
+				zonas = ["zona",tab[i].zona];
+				precios = ["precio",prec];
+				nuevaMatriz[cont] = [anos,metros,habitaciones,zonas,precios];
+				cont++;
+			}
+
+			prec = 0;
+		}
+
+		return nuevaMatriz;
+
+	}
+	
+	function Visualizar(result){
+		for(k = 0; k < result.length ; k++){
+			for(l = 0; l < result[k].length ; l++){
+				document.write(result[k][l]+"<br>");
+			}
+			document.write("<br>");
+		}
+	}
+
+
+	const objeto = '[{'+
+	'"ano": 2000,'+
+	'"metros": 100,'+
+	'"habitaciones": 3,'+
+	'"zona": "A"'+
+	'},'+
+	'{'+
+	'"ano": 2012,'+
+	'"metros": 60,'+
+	'"habitaciones": 2,'+
+	'"zona": "B"'+
+	'},'+
+	'{'+
+	'"ano": 1980,'+
+	'"metros": 120,'+
+	'"habitaciones": 4,'+
+	'"zona": "A"'+
+	'},'+
+	'{'+
+	'"ano": 2005,'+
+	'"metros": 75,'+
+	'"habitaciones": 3,'+
+	'"zona": "B"'+
+	'}]';
+
+	const array = JSON.parse(objeto);
+
+	presupuesto = parseInt(prompt("Introduzca un presupuesto"));
+
+	Visualizar(habitacionesMenoresPresupuesto(array,presupuesto));
+</script>
+
+</body>
